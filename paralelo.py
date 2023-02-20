@@ -36,6 +36,7 @@ scrape('a.com')
 scrape('b.com')
 scrape('c.com')
 scrape('d.com')
+
 data=pool.map(scrape, urls) #Ejecutamos la función scrape en paralelo para cada una de las páginas web de la lista urls. El .map es la función que se encarga de ejecutar cada una de las páginas web en paralelo.
 pool.close() #Cerramos el pool de procesos
 print()
