@@ -8,6 +8,9 @@ Este es el link del [repositorio](https://github.com/albabernal03/Tarea-en-paral
 <h2>¿De qué trata esta tarea?</h2>
 En esta tarea vamos siguiendo una clase de pasos, para ir viendo la diferencia de ejecutar el código en paralelo o en secuencial.
 
+<h2>Explicación paso a paso de código:</h2>
+
+**Pasos:**
 
 
 ***
