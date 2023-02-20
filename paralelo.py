@@ -23,5 +23,12 @@ for url in urls:
     result = scrape(url)
     output.append(result)
 
-#
+#En este caso, trabajamos de forma secuencial. Por lo tanto, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente.
+
+
+#AHORA HACEMOS EL TRABAJO EN MULTIPROCESAMIENTO
+
+#En primer lugar debemos importar la librería multiprocessing
+
+from multiprocessing import Pool #Importamos la librería Pool para realizar el trabajo en un pool de procesos, es decir, un pool de procesos es una función que se encarga de ejecutar un conjunto de procesos en paralelo. 
 
