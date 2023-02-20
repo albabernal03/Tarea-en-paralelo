@@ -12,5 +12,11 @@ En esta tarea vamos siguiendo una clase de pasos, para ir viendo la diferencia d
 
 **Pasos:**
 
+**1.** Creamos una lista con distintas urls:
+
+```
+urls =["a.com", "b.com", "c.com", "d.com"]
+```
+
 
 ***
