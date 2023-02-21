@@ -78,7 +78,7 @@ for row in data: #Imprimimos los resultados
 Al trabajar en paralelo, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea mucho más eficiente.
 
 
-**8.** Ahora veamos que sucede si aumentamos el número de URls:
+**8.** Ahora veamos que sucede si **aumentamos el número de URls**:
 
 ```
 urls2= ["a.com", "b.com", "c.com", "d.com", "e.com"]
