@@ -75,6 +75,8 @@ for row in data: #Imprimimos los resultados
 
 ```
 
+Al trabajar en paralelo, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea mucho más eficiente.
+
 
 
 ***
