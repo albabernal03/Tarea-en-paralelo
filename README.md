@@ -56,6 +56,14 @@ from multiprocessing import Pool #Importamos la librería Pool para realizar el 
 
 ```
 
+**6.** Creamos un pool de 4 procesos (podemos crear tantos como queramos) y Ejecutamos la función scrape en paralelo para cada una de las páginas web de la lista urls. El .map es la función que se encarga de ejecutar cada una de las páginas web en paralelo:
+
+```
+pool = Pool(processes=4)
+data=pool.map(scrape, urls)
+
+```
+
 
 
 ***
