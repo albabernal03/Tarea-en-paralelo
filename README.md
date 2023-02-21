@@ -64,6 +64,17 @@ data=pool.map(scrape, urls)
 
 ```
 
+**7.** A continuación, cerramos el pool e imprimimos data:
+
+```
+
+pool.close() #Cerramos el pool de procesos
+print()
+for row in data: #Imprimimos los resultados
+    print(row)
+
+```
+
 
 
 ***
