@@ -49,11 +49,10 @@ En este caso, trabajamos de forma secuencial. Por lo tanto, el tiempo total de e
 
 **5.** Lo hacemos ahora con **multiprocesamiento**:
 
-Importamos las librerias que necesitamos
+Importamos las libreria que necesitamos
 
 ```
 from multiprocessing import Pool #Importamos la librería Pool para realizar el trabajo en un pool de procesos, es decir, un pool de procesos es una función que se encarga de ejecutar un conjunto de procesos en paralelo.
-pool = Pool(processes=4) #Creamos un pool de 4 procesos (podemos crear tantos como queramos)
 
 ```
 
