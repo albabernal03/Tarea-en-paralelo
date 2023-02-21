@@ -36,7 +36,7 @@ def scrape(url):
 
 ```
 
-**4.** Ahora haremos lo mismo pero de forma secuencial:
+**4.** Ahora haremos lo mismo pero de forma **secuencial**:
 
 ```
 output = []
@@ -47,7 +47,7 @@ for url in urls:
 ```
 En este caso, trabajamos de forma secuencial. Por lo tanto, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente.
 
-
+**5.** Lo hacemos ahora con multiprocesamiento:
 
 
 
