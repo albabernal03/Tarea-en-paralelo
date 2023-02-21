@@ -27,6 +27,7 @@ def secuencial(urls):
 #En primer lugar debemos importar la librería multiprocessing
 
 from multiprocessing import Pool #Importamos la librería Pool para realizar el trabajo en un pool de procesos, es decir, un pool de procesos es una función que se encarga de ejecutar un conjunto de procesos en paralelo.
+
 def multiprocess(urls):
     pool = Pool(processes=4) #Creamos un pool de 4 procesos (podemos crear tantos como queramos)
     data=pool.map(scrape, urls) #Ejecutamos la función scrape en paralelo para cada una de las páginas web de la lista urls. El .map es la función que se encarga de ejecutar cada una de las páginas web en paralelo.
