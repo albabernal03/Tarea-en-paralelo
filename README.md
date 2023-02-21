@@ -17,6 +17,11 @@ En esta tarea vamos siguiendo una clase de pasos, para ir viendo la diferencia d
 ```
 urls =["a.com", "b.com", "c.com", "d.com"]
 ```
+**2.** Importamos las librerías
 
+```
+import random  #Importamos la librería random para generar números aleatorios
+from time import sleep  #Importamos la librería sleep para esperar un tiempo determinado
+```
 
 ***
