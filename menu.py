@@ -11,10 +11,10 @@ def inicio():
     opcion = int(input('Opcion: '))
     if opcion == 1:
         secuencial(urls)
-    elif opcion == 2:
+    elif opcion == 2: #TODO: check if this is correct
         multiprocess(urls)
     elif opcion == 3:
-        multiprocess(urls2)
+        multiprocess(urls2) 
     else:
         print('Opcion no valida')
 
