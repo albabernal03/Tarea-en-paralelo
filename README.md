@@ -47,7 +47,15 @@ for url in urls:
 ```
 En este caso, trabajamos de forma secuencial. Por lo tanto, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente.
 
-**5.** Lo hacemos ahora con multiprocesamiento:
+**5.** Lo hacemos ahora con **multiprocesamiento**:
+
+Importamos las librerias que necesitamos
+
+```
+from multiprocessing import Pool #Importamos la librería Pool para realizar el trabajo en un pool de procesos, es decir, un pool de procesos es una función que se encarga de ejecutar un conjunto de procesos en paralelo.
+pool = Pool(processes=4) #Creamos un pool de 4 procesos (podemos crear tantos como queramos)
+
+```
 
 
 
