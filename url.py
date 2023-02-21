@@ -1,9 +1,5 @@
 #Vamos a seguir paso a paso la tarea
 
-#En primer lugar, creamos una lista:
-
-urls =["a.com", "b.com", "c.com", "d.com"]
-
 import random  #Importamos la librería random para generar números aleatorios
 from time import sleep  #Importamos la librería sleep para esperar un tiempo determinado
 
@@ -17,11 +13,11 @@ def scrape(url):
 
 
 #AHORA VAMOS A VERLO DE FORMA SECUENCIAL
-
-output = []
-for url in urls:
-    result = scrape(url)
-    output.append(result)
+def secuencial(urls):
+    output = []
+    for url in urls:
+        result = scrape(url)
+        output.append(result)
 
 #En este caso, trabajamos de forma secuencial. Por lo tanto, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente.
 
