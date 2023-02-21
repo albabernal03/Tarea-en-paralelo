@@ -56,6 +56,46 @@ from multiprocessing import Pool #Importamos la librería Pool para realizar el 
 
 ```
 
+**6.** Creamos un pool de 4 procesos (podemos crear tantos como queramos) y Ejecutamos la función scrape en paralelo para cada una de las páginas web de la lista urls. El .map es la función que se encarga de ejecutar cada una de las páginas web en paralelo:
+
+```
+pool = Pool(processes=4)
+data=pool.map(scrape, urls)
+
+```
+
+**7.** A continuación, cerramos el pool e imprimimos data:
+
+```
+
+pool.close() #Cerramos el pool de procesos
+print()
+for row in data: #Imprimimos los resultados
+    print(row)
+
+```
+
+Al trabajar en paralelo, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea mucho más eficiente.
+
+
+**8.** Ahora veamos que sucede si **aumentamos el número de URls**:
+
+```
+urls2= ["a.com", "b.com", "c.com", "d.com", "e.com"]
+pool = Pool(processes=4) 
+data=pool.map(scrape, urls2) 
+pool.close() 
+print()
+for row in data:
+    print(row)
+
+```
+Como hay 5 urls y solo 4 procesos, el proceso 4 se queda esperando a que se libere un proceso para poder ejecutar la url e.com
+
+
+
+
+
 
 
 ***
