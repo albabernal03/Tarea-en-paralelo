@@ -129,7 +129,7 @@ Como hay 5 urls y solo 4 procesos, el proceso 4 se queda esperando a que se libe
 
 <h2>Conclusión:</h2>
 
-Luego en conclusion, si lo ejecutamos de forma secuencial el tiempo total de ejecución es mayor a que si lo ejecutamos con multiprocesamiento. Esto se debe a que en el caso de ejecutarlo de forma secuencial, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente. En cambio, en el caso de ejecutarlo con multiprocesamiento, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea más eficiente. Asimismo hemos visto que si tenemos más urls que procesos, este último no se ejecutará hasta que el primer trabajador disponible se quede libre.
+En conclusión, si lo ejecutamos de forma secuencial el tiempo total de ejecución es mayor a que si lo ejecutamos con multiprocesamiento. Esto se debe a que en el caso de ejecutarlo de forma secuencial, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente. En cambio, en el caso de ejecutarlo con multiprocesamiento, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea más eficiente. Asimismo hemos visto que si tenemos más urls que procesos, este último no se ejecutará hasta que el primer trabajador disponible se quede libre.
 
 
 
