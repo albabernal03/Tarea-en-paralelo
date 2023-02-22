@@ -79,16 +79,18 @@ for row in data: #Imprimimos los resultados
 Al trabajar en paralelo, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea mucho más eficiente.
 
 
-**8.** Ahora veamos que sucede si **aumentamos el número de URls**:
+**8.** Ahora veamos que sucede si **aumentamos el número de URls**(lo ponemos ya todo dentro de una función):
 
 ```
 urls2= ["a.com", "b.com", "c.com", "d.com", "e.com"]
-pool = Pool(processes=4) 
-data=pool.map(scrape, urls2) 
-pool.close() 
-print()
-for row in data:
-    print(row)
+
+def multiprocess(urls2):
+    pool = Pool(processes=4) 
+    data=pool.map(scrape, urls2) 
+    pool.close() 
+    print()
+    for row in data: 
+        print(row)
 
 ```
 Como hay 5 urls y solo 4 procesos, el proceso 4 se queda esperando a que se libere un proceso para poder ejecutar la url e.com
