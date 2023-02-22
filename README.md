@@ -23,8 +23,6 @@ def scrape(url):
     print("finished", url, "time taken:", duration, "seconds")
     return url, duration
 
-
-
 def secuencial(urls):
     output = []
     for url in urls:
