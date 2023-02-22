@@ -18,4 +18,4 @@ def inicio():
     else:
         print('Opcion no valida')
 
-inicio()
+
