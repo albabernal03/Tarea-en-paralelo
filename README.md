@@ -102,6 +102,8 @@ Luego en conclusion, si lo ejecutamos de forma secuencial el tiempo total de eje
 
 
 
+<h2>Código:</h2>
+
 
 
 ***
