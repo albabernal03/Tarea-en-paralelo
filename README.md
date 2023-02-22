@@ -132,6 +132,14 @@ Como hay 5 urls y solo 4 procesos, el proceso 4 se queda esperando a que se libe
 
 ![secuencial](https://user-images.githubusercontent.com/91721875/220491069-e648dc24-a2f0-42aa-859f-8417552ae1f3.png)
 
+**CON MULTIPROCESAMIENTO, 4 URLS**
+
+![multiprocesamiento](https://user-images.githubusercontent.com/91721875/220491190-c5fdcf8f-4d48-4762-9634-2421dc8c4384.png)
+
+**CON MULTIPROCESAMIENTO, 5 URLS**
+
+![5 urls](https://user-images.githubusercontent.com/91721875/220491257-2823a3d9-723a-42e3-b435-7f0331e46820.png)
+
 
 <h2>Conclusión:</h2>
 
