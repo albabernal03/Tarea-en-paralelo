@@ -8,6 +8,39 @@ Este es el link del [repositorio](https://github.com/albabernal03/Tarea-en-paral
 <h2>¿De qué trata esta tarea?</h2>
 En esta tarea vamos siguiendo una clase de pasos, para ir viendo la diferencia de ejecutar el código en paralelo o en secuencial.
 
+<h2>Código:</h2>
+
+```
+
+import random  
+from time import sleep  
+from multiprocessing import Pool
+
+def scrape(url):
+    print("starting", url)
+    duration = round(random.random(), 3) 
+    sleep(duration)
+    print("finished", url, "time taken:", duration, "seconds")
+    return url, duration
+
+
+
+def secuencial(urls):
+    output = []
+    for url in urls:
+        result = scrape(url)
+        output.append(result)
+
+def multiprocess(urls):
+    pool = Pool(processes=4) 
+    data = pool.map(scrape, urls)
+    pool.close() 
+    print()
+    for row in data: 
+        print(row)
+
+```
+
 <h2>Explicación paso a paso de código:</h2>
 
 **Pasos:**
@@ -102,37 +135,6 @@ Luego en conclusion, si lo ejecutamos de forma secuencial el tiempo total de eje
 
 
 
-<h2>Código:</h2>
 
-```
-
-import random  
-from time import sleep  
-from multiprocessing import Pool
-
-def scrape(url):
-    print("starting", url)
-    duration = round(random.random(), 3) 
-    sleep(duration)
-    print("finished", url, "time taken:", duration, "seconds")
-    return url, duration
-
-
-
-def secuencial(urls):
-    output = []
-    for url in urls:
-        result = scrape(url)
-        output.append(result)
-
-def multiprocess(urls):
-    pool = Pool(processes=4) 
-    data = pool.map(scrape, urls)
-    pool.close() 
-    print()
-    for row in data: 
-        print(row)
-
-```
 
 ***
