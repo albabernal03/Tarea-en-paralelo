@@ -5,9 +5,11 @@
 Este es el link del [repositorio](https://github.com/albabernal03/Tarea-en-paralelo)
 
 ***
+
 <h2>¿De qué trata esta tarea?</h2>
 En esta tarea vamos siguiendo una clase de pasos, para ir viendo la diferencia de ejecutar el código en paralelo o en secuencial.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h2>Código:</h2>
 
 ```
@@ -38,7 +40,7 @@ def multiprocess(urls):
         print(row)
 
 ```
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 <h2>Explicación paso a paso de código:</h2>
 
 **Pasos:**
@@ -125,6 +127,8 @@ def multiprocess(urls2):
 
 ```
 Como hay 5 urls y solo 4 procesos, el proceso 4 se queda esperando a que se libere un proceso para poder ejecutar la url e.com
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h2>Resultados:</h2>
 
