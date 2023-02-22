@@ -3,6 +3,7 @@ import random
 from time import sleep  
 from multiprocessing import Pool
 
+urls= ["a.com", "b.com", "c.com", "d.com"]
 def scrape(url):
     print("starting", url)
     duration = round(random.random(), 3) 
@@ -10,13 +11,13 @@ def scrape(url):
     print("finished", url, "time taken:", duration, "seconds")
     return url, duration
 
-def secuencial(urls):
+def secuencial(url):
     output = []
     for url in urls:
         result = scrape(url)
         output.append(result)
 
-def multiprocess(urls):
+def multiprocess(url):
     pool = Pool(processes=4) 
     data = pool.map(scrape, urls)
     pool.close() 
