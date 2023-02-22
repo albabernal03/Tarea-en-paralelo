@@ -128,6 +128,10 @@ Como hay 5 urls y solo 4 procesos, el proceso 4 se queda esperando a que se libe
 
 <h2>Resultados:</h2>
 
+**DE FORMA SECUENCIAL**
+
+![secuencial](https://user-images.githubusercontent.com/91721875/220491069-e648dc24-a2f0-42aa-859f-8417552ae1f3.png)
+
 
 <h2>Conclusión:</h2>
 
