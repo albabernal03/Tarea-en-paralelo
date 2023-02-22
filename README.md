@@ -8,6 +8,37 @@ Este es el link del [repositorio](https://github.com/albabernal03/Tarea-en-paral
 <h2>¿De qué trata esta tarea?</h2>
 En esta tarea vamos siguiendo una clase de pasos, para ir viendo la diferencia de ejecutar el código en paralelo o en secuencial.
 
+<h2>Código:</h2>
+
+```
+
+import random  
+from time import sleep  
+from multiprocessing import Pool
+
+def scrape(url):
+    print("starting", url)
+    duration = round(random.random(), 3) 
+    sleep(duration)
+    print("finished", url, "time taken:", duration, "seconds")
+    return url, duration
+
+def secuencial(urls):
+    output = []
+    for url in urls:
+        result = scrape(url)
+        output.append(result)
+
+def multiprocess(urls):
+    pool = Pool(processes=4) 
+    data = pool.map(scrape, urls)
+    pool.close() 
+    print()
+    for row in data: 
+        print(row)
+
+```
+
 <h2>Explicación paso a paso de código:</h2>
 
 **Pasos:**
@@ -39,10 +70,11 @@ def scrape(url):
 **4.** Ahora haremos lo mismo pero de forma **secuencial**:
 
 ```
-output = []
-for url in urls:
-    result = scrape(url)
-    output.append(result)
+def secuencial(urls):
+    output = []
+    for url in urls:
+        result = scrape(url)
+        output.append(result)
 
 ```
 En este caso, trabajamos de forma secuencial. Por lo tanto, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente.
@@ -78,21 +110,26 @@ for row in data: #Imprimimos los resultados
 Al trabajar en paralelo, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea mucho más eficiente.
 
 
-**8.** Ahora veamos que sucede si **aumentamos el número de URls**:
+**8.** Ahora veamos que sucede si **aumentamos el número de URls**(lo ponemos ya todo dentro de una función):
 
 ```
 urls2= ["a.com", "b.com", "c.com", "d.com", "e.com"]
-pool = Pool(processes=4) 
-data=pool.map(scrape, urls2) 
-pool.close() 
-print()
-for row in data:
-    print(row)
+
+def multiprocess(urls2):
+    pool = Pool(processes=4) 
+    data=pool.map(scrape, urls2) 
+    pool.close() 
+    print()
+    for row in data: 
+        print(row)
 
 ```
 Como hay 5 urls y solo 4 procesos, el proceso 4 se queda esperando a que se libere un proceso para poder ejecutar la url e.com
 
 
+<h2>Conclusión:</h2>
+
+En conclusión, si lo ejecutamos de forma secuencial el tiempo total de ejecución es mayor a que si lo ejecutamos con multiprocesamiento. Esto se debe a que en el caso de ejecutarlo de forma secuencial, el tiempo total de ejecución es la suma de los tiempos de ejecución de cada una de las páginas web, lo que hace que sea ineficiente. En cambio, en el caso de ejecutarlo con multiprocesamiento, el tiempo total de ejecución es el tiempo de ejecución de la página web más lenta, lo que hace que sea más eficiente. Asimismo hemos visto que si tenemos más urls que procesos, este último no se ejecutará hasta que el primer trabajador disponible se quede libre.
 
 
 
